@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -d "/root/.ask" ]; then
+    echo "Initializing ask config"
+
+    mkdir -p /root/.ask
+
+    echo "{ \"profiles\": { \"default\": $ASK_CONFIG } }" > /root/.ask/cli_config
+fi
